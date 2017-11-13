@@ -17,6 +17,8 @@ class Controller {
         if(isset($name) && file_exists('../app/views/' . $name . '/index.php')){
             $this->view_val = filter_var($name, FILTER_SANITIZE_ENCODED);// ---- RETIRAR CARACTERES ESPECIAIS
             require_once '../app/views/' . $this->view_val . '/index.php';
+            $this->view_val = 'v' . $this->view_val;
+            $this->view_val = new $this->view_val;
         }
         
     }
