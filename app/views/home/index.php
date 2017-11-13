@@ -1,9 +1,16 @@
 <?php
 
-class vhome extends Viewer {
+class vhome {
     function __construct() {
         echo 'chegou meu parsa!';
+        
+        $a = new htmlParse('a');
+        $a->addContent('ola mundão');
+        echo $a->show();
+        $br = new htmlParse('br');
+        
     }
+    
     
 }
 /* 

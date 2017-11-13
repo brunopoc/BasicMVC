@@ -3,6 +3,7 @@ class home extends Controller {
     function index ($params = ''){
         $this->View('home');
         $this->obj_name = 'home';
+        
     }
 }
 

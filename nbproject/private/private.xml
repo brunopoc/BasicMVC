@@ -3,10 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/wamp64/www/mvc2/app/core/controller.php</file>
-            <file>file:/C:/wamp64/www/mvc2/app/core/app.php</file>
-            <file>file:/C:/wamp64/www/mvc2/public/index.php</file>
-            <file>file:/C:/wamp64/www/mvc2/app/init.php</file>
+            <file>file:/C:/wamp64/www/BasicMVC/app/core/controller.php</file>
+            <file>file:/C:/wamp64/www/BasicMVC/app/views/home/index.php</file>
+            <file>file:/C:/wamp64/www/BasicMVC/app/views/Viewer.php</file>
+            <file>file:/C:/wamp64/www/BasicMVC/public/index.php</file>
+            <file>file:/C:/wamp64/www/BasicMVC/app/controllers/home.php</file>
+            <file>file:/C:/wamp64/www/BasicMVC/app/core/app.php</file>
+            <file>file:/C:/wamp64/www/BasicMVC/app/init.php</file>
         </group>
     </open-files>
 </project-private>
