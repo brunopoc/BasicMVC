@@ -2,13 +2,18 @@
 
 class vhome {
     function __construct() {
-        echo 'chegou meu parsa!';
         
         $a = new htmlParse('a');
         $a->addContent('ola mundão');
-        echo $a->show();
-        $br = new htmlParse('br');
         
+        
+        $br = new htmlParse('br');
+        $br = $br->show();
+        $a->addContent($br);
+        $a = $a->show();
+        echo $a;
+        echo $br;
+        echo $a;
     }
     
     
