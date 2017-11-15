@@ -1,20 +1,27 @@
 <?php
-class htmlParse {
-    private $tagName = '';
+class htmlElement {
     private $tag = '';
+    private $tagName = '';
     private $properties = [];
-    private $content = [];
+    private $contents = [];
     
     function __construct($name = '') {
         if(isset ($name)){
             $this->tagName =  $name;
         }
-        
     }
     
-    function addPropertie($propertie = []){
-        if(isset($propertie)){
-            array_push($this->properties, $propertie);
+    function __set($name, $value) {
+        $this->properties[$name] = $value;
+    }
+    
+    function __get($name) {
+        return isset($this->properties[$name]) ? $this->properties[$name] : NULL;
+    }
+    
+    function add($content = ''){
+        if(isset($content)){
+            array_push($this->contents, $content);
         }
     }
     
@@ -26,16 +33,21 @@ class htmlParse {
             $this->tag .= $key . ':' . "'{$value}'" . ' ';
             }
         $this->tag .= ' >';    
-        foreach ($this->content as $value){
+        foreach ($this->contents as $value){
             $this->tag .= $value;
             }
+            
         $this->tag .= '</ '. $this->tagName . '>';
+        
         return $this->tag;
 
     }
     
-    function addContent ($text = ''){
-        array_push($this->content, $text);
+    function __toString (){
+        ob_start();
+        $this->show();
+        $result = ob_get_clean();
+        return $result;
     }
     
 }

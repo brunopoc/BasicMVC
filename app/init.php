@@ -3,7 +3,7 @@
 require_once 'core/app.php';
 require_once 'core/controller.php';
 
-require_once 'views/htmlParse.php';
+require_once 'views/htmlElement.php';
 
 
 $app = new App; // --------- INICIANDO O APLICATIVO

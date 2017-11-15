@@ -3,17 +3,10 @@
 class vhome {
     function __construct() {
         
-        $a = new htmlParse('a');
-        $a->addContent('ola mundão');
+        $a = new htmlElement('a');
+        $a->add('ola mundão');
+        echo $a->show();
         
-        
-        $br = new htmlParse('br');
-        $br = $br->show();
-        $a->addContent($br);
-        $a = $a->show();
-        echo $a;
-        echo $br;
-        echo $a;
     }
     
     
